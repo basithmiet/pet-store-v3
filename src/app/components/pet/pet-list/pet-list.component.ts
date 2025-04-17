@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../../models/petstore';
 import { PetstoreService } from '../../../services/petstore.service';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { PetDetailComponent } from '../pet-detail/pet-detail.component';
 
 @Component({
@@ -10,7 +9,7 @@ import { PetDetailComponent } from '../pet-detail/pet-detail.component';
   templateUrl: './pet-list.component.html',
   styleUrls: ['./pet-list.component.css'],
   imports: [CommonModule, RouterModule, PetDetailComponent],
-  standalone: true,
+  standalone: true
 })
 export class PetListComponent implements OnInit {
   pets: Pet[] = [];
