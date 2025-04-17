@@ -1,0 +1,15 @@
+<div *ngIf="pet">
+  <h2>Pet Details</h2>
+  <p><strong>ID:</strong> {{ pet.id }}</p>
+  <p><strong>Name:</strong> {{ pet.name }}</p>
+  <p><strong>Status:</strong> {{ pet.status }}</p>
+  <div *ngIf="pet.category">
+    <p><strong>Category:</strong> {{ pet.category.name }}</p>
+  </div>
+  <div *ngIf="pet.tags && pet.tags.length > 0">
+    <p><strong>Tags:</strong></p>
+    <ul>
+      <li *ngFor="let tag of pet.tags">{{ tag.name }}</li>
+    </ul>
+  </div>
+</div>

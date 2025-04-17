@@ -1,0 +1,19 @@
+<div>
+  <button (click)="refreshPets()">Refresh Pets</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pet of pets">
+        <td>{{ pet.id }}</td>
+        <td>{{ pet.name }}</td>
+        <td>{{ pet.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

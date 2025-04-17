@@ -1,0 +1,28 @@
+<div>
+  <label for="orderId">Order ID:</label>
+  <input type="number" id="orderId" [(ngModel)]="orderId" />
+  <button (click)="searchOrder()">Search Order</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Pet ID</th>
+      <th>Quantity</th>
+      <th>Ship Date</th>
+      <th>Status</th>
+      <th>Complete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td>{{ order.petId }}</td>
+      <td>{{ order.quantity }}</td>
+      <td>{{ order.shipDate }}</td>
+      <td>{{ order.status }}</td>
+      <td>{{ order.complete }}</td>
+    </tr>
+  </tbody>
+</table>
