@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../../models/petstore';
 import { PetstoreService } from '../../../services/petstore.service';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-
+import { RouterModule } from '@angular/router';
+import { PetDetailComponent } from '../pet-detail/pet-detail.component';
 
 @Component({
   selector: 'app-pet-list',
   templateUrl: './pet-list.component.html',
   styleUrls: ['./pet-list.component.css'],
-  imports:[CommonModule,HttpClientModule]
+  imports: [CommonModule, RouterModule, PetDetailComponent],
+  standalone: true,
 })
 export class PetListComponent implements OnInit {
   pets: Pet[] = [];
