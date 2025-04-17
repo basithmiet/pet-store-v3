@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Pet } from '../../../models/petstore';
 import { PetstoreService } from '../../../services/petstore.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-pet-detail',
-  template: ``,
-  standalone: true
+  templateUrl: 'pet-detail.component.html',
+  standalone: true,
+  imports: [RouterModule, CommonModule],
+  styleUrls:['./pet-detail.component.css']
 })
 export class PetDetailComponent implements OnInit {
   pet: Pet | null = null;

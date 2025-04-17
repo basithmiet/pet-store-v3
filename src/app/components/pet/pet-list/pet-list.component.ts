@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   selector: 'app-pet-list',
   templateUrl: './pet-list.component.html',
   styleUrls: ['./pet-list.component.css'],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule ],
   standalone: true
 })
 export class PetListComponent implements OnInit {
