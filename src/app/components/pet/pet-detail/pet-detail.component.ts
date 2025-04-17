@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PetstoreService } from 'src/app/services/petstore.service';
-import { Pet } from 'src/app/models/petstore';
+import { Pet } from '../../../models/petstore';
+import { PetstoreService } from '../../../services/petstore.service';
 
 @Component({
   selector: 'app-pet-detail',
@@ -21,13 +21,13 @@ export class PetDetailComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.petId = params.get('petId');
       if (this.petId) {
-        this.loadPet(this.petId);
+        this.loadPet(Number(this.petId));
       }
     });
   }
 
-  loadPet(petId: string): void {
-    this.petstoreService.getPetById(petId).subscribe(pet => {
+  loadPet(petId: number): void {
+    this.petstoreService.getPetById(petId).subscribe((pet: Pet) => {
       this.pet = pet;
     });
   }

@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {
-  Pet,
-  ApiResponse,
-  Order,
-  User,
-} from './models/petstore';
+import { ApiResponse, Order, Pet, User } from '../models/petstore';
+
 
 @Injectable({
   providedIn: 'root',
