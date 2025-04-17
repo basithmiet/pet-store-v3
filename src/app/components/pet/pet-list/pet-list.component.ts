@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Pet } from '../../../models/petstore';
 import { PetstoreService } from '../../../services/petstore.service';
 import { CommonModule } from '@angular/common';
-import { PetDetailComponent } from '../pet-detail/pet-detail.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-pet-list',
   templateUrl: './pet-list.component.html',
   styleUrls: ['./pet-list.component.css'],
-  imports: [CommonModule, RouterModule, PetDetailComponent],
+  imports: [CommonModule, RouterModule],
   standalone: true
 })
 export class PetListComponent implements OnInit {
